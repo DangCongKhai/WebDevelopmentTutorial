@@ -1,0 +1,324 @@
+
+
+  <body>
+    <header>
+      <h1>CSS Positioning Cheat Sheet</h1>
+    </header>
+
+    <main>
+      <!-- STATIC START-->
+      <section class="static">
+        <h2 class="position__title">Static</h2>
+        <p class="position__description">
+          An element with
+          <span class="inline__rule">position: static;</span> occupies its
+          normal position in the document flow. Block-level elements will take
+          up an entire line, while inline elements will take up only their
+          content space. No offset or height/width parameters can be set.
+        </p>
+
+        <div class="example__container">
+          <div class="static__1"><strong>Static 1</strong> -block</div>
+          <div class="static__2"><strong>Static 2</strong> - block</div>
+          <a href="https://www.google.com" class="static__3" target="_blank"
+            >Here is a inline anchor element</a
+          >
+          <span class="static__4">Here is an inline span element</span>
+        </div>
+        <div class="code__example">
+          <h3>CSS code Example -Static 1</h3>
+          <code>
+            <span class="css__selector">.static__1</span> {<br />
+            <span class="css__property">position:</span>
+            <span class="css__value">static</span>;<br />
+            <span class="css__property">background-color:</span>
+            <span class="css__value">orange</span>;<br />
+            <span class="closing__bracket">}</span>
+          </code>
+        </div>
+      </section>
+
+      <!-- RELATIVE START-->
+      <section class="relative">
+        <h2 class="position__title">Relative</h2>
+        <p class="position__description">
+          An element with
+          <span class="inline__rule">position: relative;</span> is positioned
+          relative to its 'normal' position in the document flow. The top,
+          right, bottom, and left rules can be used to offset these elements
+          from their normal positon.
+        </p>
+        <p>
+          Relative positoned elements are still in the normal document flow.
+        </p>
+
+        <div class="example__container">
+          <div class="relative__1">
+            <strong>Relative 1</strong> - This div is in its normal document
+            flow position
+          </div>
+          <div class="relative__2">
+            <strong>Relative 2</strong> -This div is offset from the top by
+            30px, and the left by 40px.
+          </div>
+          <div class="code__example">
+            <h3>CSS Code Example - Relative 2</h3>
+            <code>
+              <span class="css__selector">.static__2</span> {<br />
+              <span class="css__property">position:</span>
+              <span class="css__value">relative</span>;<br />
+              <span class="css__property">top:</span>
+              <span class="css__value">30px</span>;<br />
+              <span class="css__property">left:</span>
+              <span class="css__value">40px</span>;<br />
+              <span class="css__property">background-color</span>
+              <span class="css__value">green</span>;<br />
+              <span class="closing__bracket">}</span>
+            </code>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABSOLUTE START-->
+      <section class="absolute">
+        <h2 class="position__title">Absolute</h2>
+        <p class="position__description">
+          An element with
+          <span class="inline__rule">position: absolute;</span> will be
+          positioned relative to its nearest positioned ancestor (instead of
+          relative to the normal document flow). If an absolute positioned
+          element has no positoned ancestors, it will use the document flow.
+        </p>
+        <p>
+          Absolute positioned elements are removed from the normal document
+          flow, and can overlap other elements
+        </p>
+
+        <div class="example__container">
+          <div class="absolute__parent">
+            Absolute Parent
+            <div class="absolute__child">Absolute Child</div>
+          </div>
+        </div>
+
+        <div class="code__example">
+          <h3>CSS Code Example - Absolute Parent & Absolute Child</h3>
+          <code>
+            <span class="css__selector">.absolute__parent</span> {<br />
+            <span class="css__property">position:</span>
+            <span class="css__value">relative</span>;<br />
+            <span class="css__property">width:</span>
+            <span class="css__value">500px</span>;<br />
+            <span class="css__property">height:</span>
+            <span class="css__value">200px</span>;<br />
+            <span class="css__property">background-color</span>
+            <span class="css__value">orange</span>;<br />
+            <span class="closing__bracket">}</span>
+            <br />
+            <br />
+            <span class="css__selector">.absolute__child</span> {<br />
+            <span class="css__property">position:</span>
+            <span class="css__value">absolute</span>;<br />
+            <span class="css__property">width:</span>
+            <span class="css__value">250px</span>;<br />
+            <span class="css__property">height:</span>
+            <span class="css__value">100px</span>;<br />
+            <span class="css__property">top:</span>
+            <span class="css__value">100px</span>;<br />
+            <span class="css__property">left:</span>
+            <span class="css__value">250px</span>;<br />
+            <span class="css__property">background-color</span>
+            <span class="css__value">green</span>;<br />
+            <span class="closing__bracket">}</span>
+          </code>
+        </div>
+      </section>
+
+      <!-- FIXED START-->
+      <section class="fixed">
+        <h2>Fixed</h2>
+        <p class="position__description">
+          An element with <span class="inline__rule">position: fixed;</span> has
+          a fixed postion relative to the viewport. This means it always stays
+          in the same place regardless of scrolling.
+        </p>
+        <p class="position__description">
+          A fixed position element is removed from the normal flow, so can
+          overlap.
+        </p>
+        <p class="position__description">
+          Notice the element in the lower-right portion of the screen - it stays
+          there no matter where you scroll.
+        </p>
+
+        <div class="fixed__example">
+          This element is fixed in place with
+          <span class="inline__rule">position: fixed;</span>
+        </div>
+
+        <div class="code__example">
+          <h3>Code Example - Fixed Element on Bottom Right</h3>
+          <code>
+            <span class="css__selector">.fixed__example</span> {<br />
+            <span class="css__property">position:</span>
+            <span class="css__value">fixed</span>;<br />
+
+            <span class="css__property">bottom:</span>
+            <span class="css__value">10px</span>;<br />
+
+            <span class="css__property">right:</span>
+            <span class="css__value">10px</span>;<br />
+
+            <span class="css__property">width:</span>
+            <span class="css__value">200px</span>;<br />
+
+            <span class="css__property">height:</span>
+            <span class="css__value">50px</span>;<br />
+
+            <span class="css__property">background-color:</span>
+            <span class="css__value">lightgreen</span>;<br />
+            <span class="closing__bracket">}</span>
+          </code>
+        </div>
+      </section>
+
+      <section class="sticky">
+        <h2>Sticky</h2>
+        <p class="position__description">
+          An element with <span class="inline__rule">position: sticky;</span> is
+          positioned with a mix of relative and fixed, depending on scroll
+          position
+        </p>
+        <p class="position__description">
+          The element is positioned
+          <span class="inline__rule">position: relative</span> until a given
+          offset position is met in the viewport - then it 'sticks' by flipping
+          to <span class="inline__rule">position: fixed</span>
+        </p>
+
+        <div class="example__container">
+          <h3>
+            Try to scroll inside this frame to see how sticky positioning works
+          </h3>
+          <div class="sticky__example">
+            <span class='stuck'>I am a sticky element!</span>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+              neque, soluta recusandae officia quia, porro tenetur iure sapiente
+              id temporibus ex incidunt dolore nostrum suscipit nam adipisci
+              labore repudiandae, libero architecto. Eaque neque porro earum hic
+              culpa sunt dolores et, eius saepe. Sed perspiciatis commodi nisi
+              odio nam deleniti.<br /><br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Perferendis modi similique adipisci exercitationem quidem ab,
+              minus alias nemo? Eveniet beatae nostrum ullam saepe quia dolorum
+              porro quam error vel fugit tempore maiores nesciunt dicta maxime,
+              tempora pariatur iure distinctio itaque! Ad explicabo eligendi sit
+              assumenda aliquid facere, dolor suscipit repudiandae quae saepe ea
+              dolore ab non et officiis harum ducimus, aperiam quisquam
+              repellendus modi labore, libero cum. Repudiandae temporibus
+              laboriosam deserunt, sed, quasi exercitationem similique error,
+              adipisci sit delectus suscipit? Blanditiis, similique aut. Atque
+              sunt dicta, veniam facere nihil numquam labore. Modi tempore,
+              optio nihil, quas eaque officia distinctio ab perferendis dolores
+              quasi natus deserunt facilis ut nostrum nisi aut fugiat, excepturi
+              nemo alias quam! Ullam reiciendis suscipit ipsam amet, enim dicta,
+              ab ad magni odio similique saepe. Deleniti dolor cupiditate, ipsa
+              velit suscipit laboriosam voluptas provident! Deserunt esse totam
+              quod perspiciatis sit possimus, non labore perferendis quaerat
+              necessitatibus dicta, doloribus amet placeat cumque repellat!
+              Minima amet eum commodi cum est iusto optio culpa reprehenderit
+              dolore vitae numquam totam voluptates alias autem illum, inventore
+              in quaerat suscipit! Ut animi magni dolorum. Incidunt laboriosam
+              eos, eligendi sit consectetur beatae? Animi minus repellendus
+              cumque voluptatum id quaerat in unde accusantium officia iusto.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+              omnis pariatur voluptatum culpa! Qui est unde laudantium eveniet,
+              magnam, molestias beatae quod tempore quaerat atque sapiente! Nam
+              vero debitis, corporis expedita ab non eos voluptates delectus
+              nisi sint sapiente tenetur autem reprehenderit odio molestias illo
+              aperiam explicabo commodi pariatur libero, animi sed eum? Eum
+              veniam accusantium fugiat temporibus magni unde molestiae ab
+              minima alias velit quasi ea itaque, dolorem similique impedit quae
+              animi excepturi praesentium dicta laudantium deleniti! At eos,
+              eaque ipsam suscipit, recusandae magni nulla porro rem quae illo,
+              facere voluptate quaerat. Quam commodi aliquid, quia dignissimos
+              accusamus repellendus illum laboriosam ex magnam pariatur ad enim
+              possimus reprehenderit ut, maxime sit dolorem cum, et officiis
+              aperiam iure. Ut saepe maiores aspernatur, porro vero perspiciatis
+              itaque consequatur consectetur eligendi? Repellat voluptatem eius
+              molestias, qui illum corporis optio sit sint inventore nostrum
+              accusamus eos quia perferendis, iste corrupti consectetur
+              nesciunt! Harum dolor, explicabo placeat magni alias nobis
+              aspernatur incidunt, ratione quas aliquam quam sequi perferendis
+              dolores asperiores omnis laborum. Vitae consectetur repellendus
+              quia veniam, earum aliquid expedita ducimus commodi explicabo,
+              ratione eius dolor eveniet officiis. Aspernatur expedita quidem
+              voluptatem aut voluptatibus sed similique quam optio ad deserunt
+              aliquid facilis accusamus labore officiis tempore molestiae, dicta
+              eligendi culpa, nulla, architecto ducimus alias ipsa ab ullam!
+              Illo minima reprehenderit iusto nobis, iste repudiandae, commodi
+              pariatur repellendus id, ratione eligendi et fugiat a
+              consequuntur. Harum distinctio cum fugiat recusandae nulla non
+              modi repellendus nesciunt eius rem hic porro corporis sapiente
+              ipsam et cupiditate, rerum error fuga sit. Dicta totam placeat
+              itaque at quos est dolorem nostrum consequatur, cupiditate
+              consequuntur cumque vitae accusantium ducimus obcaecati laboriosam
+              quam, doloremque eum, animi quae! Asperiores animi libero dolorum
+              autem quia eum? Cumque ipsum quisquam debitis voluptatem quaerat
+              adipisci sequi autem minus ab voluptate mollitia possimus dolorum
+              quae incidunt non a sed tenetur labore quasi, aliquam voluptatibus
+              doloribus numquam? Dolore cum, molestias vel qui eius enim sit
+              ducimus harum officiis deserunt optio illo alias voluptatem rem
+              aut sed. Unde odit non fuga natus quibusdam consequatur excepturi
+              similique? Perferendis, dolorem! Saepe quisquam minima corrupti
+              blanditiis possimus accusantium error pariatur, inventore dolorum
+              deserunt alias aut! Explicabo animi corrupti, tenetur ex, quisquam
+              autem tempora veritatis sapiente excepturi placeat iste!
+              Repellendus suscipit maiores eveniet explicabo. Necessitatibus
+              saepe exercitationem dignissimos accusantium, magnam repudiandae
+              aliquam harum recusandae nulla vitae sed, error labore quidem
+              distinctio velit ex. Fugit ratione velit aut saepe dolore, est
+              laudantium, earum maiores placeat, ipsum natus voluptatum
+              voluptate. Minus et, laboriosam excepturi porro, quidem sed iste
+              voluptatem dignissimos qui suscipit, quia dolores sint est impedit
+              non inventore cupiditate magni. Soluta ipsa hic harum consectetur.
+              Accusamus incidunt sed debitis fugit illo nobis labore deserunt,
+              blanditiis obcaecati praesentium deleniti quia vitae sapiente
+              libero unde quod voluptatem ut excepturi culpa corrupti! Ullam,
+              unde magni? Fuga dignissimos ab, pariatur quasi illo excepturi rem
+              amet ullam quia repudiandae voluptas veniam sequi repellat magni
+              expedita libero incidunt qui doloribus. Provident illum numquam
+              rerum cum? Quam nemo, velit in nostrum dicta, provident corrupti
+              culpa illum mollitia dolorem accusantium totam.
+            </p>
+          </div>
+        </div>
+        <div class="code__example">
+        <h3>CSS Code Example - 'I am a sticky element'</h3>
+            <code>
+              <span class="css__selector">.stuck</span> {<br />
+              <span class="css__property">position:</span>
+              <span class="css__value">sticky</span>;<br />
+              <span class="css__property">top:</span>
+              <span class="css__value">0px</span>;<br />
+              <span class="css__property">background-color</span>
+              <span class="css__value">green</span>;<br />
+              <span class="closing__bracket">}</span>
+            </code>
+          </div>
+      </section>
+
+      <section class="footer">
+        <footer>Created by Ahmad Kariem. All rights resevered 2022&copy;</footer>
+      </section>
+    </main>
+  </body>
+</html>
+
+<!-- NEXT STEPS
+Make all of the code examples 'pop' off the page more by having them enclosed in a box with lightgrey background
+Make examples sectioneds look seperate by having them enclosed in a white background box
+Improve Readability of code by putting comments in delinating each section
+Improve the look by finding a good 3 color schreem - background, and 2 colors for examples
+-->

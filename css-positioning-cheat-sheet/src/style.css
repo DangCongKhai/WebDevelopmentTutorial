@@ -1,0 +1,157 @@
+* {
+    background-color: rgb(235, 217, 194);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.inline__rule {
+    background-color: lightgray;
+    color: red;
+    padding: 0 5px;
+}
+
+code {
+    background-color: lightgrey;
+}
+
+.code__example {
+    background-color: lightgrey;
+}
+
+.code__example span {
+    background-color: lightgrey;
+    font-family: monospace;
+}
+
+
+
+/* Rules for CSS code block styling */
+
+
+.css__selector {
+    color: brown;
+    margin-left: 10px;
+}
+
+.css__property {
+    color: red;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+.css__value {
+    color: blue;
+    margin-left: 10px;
+}
+
+.closing__bracket {
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+/* Static example elements */
+
+.static__1 {
+    background-color: orange;
+}
+
+.static__1 strong {
+    background-color: orange;
+}
+
+.static__2 {
+    background-color: red;
+}
+
+.static__2 strong{ 
+    background-color: red;
+}
+
+.static__3 {
+    background-color: rgb(76, 139, 199) ;
+}
+
+.static__4 {
+    background-color: green;
+}
+
+/* Relative example elements */
+
+.relative__1 {
+    background-color: orange;
+}
+
+.relative__1 strong {
+    background-color: orange;
+}
+
+.relative__2 {
+    background-color: green;
+    position: relative;
+    top: 30px;
+    left: 40px;
+    margin-bottom: 50px;
+}
+
+.relative__2 strong {
+    background-color: green;
+}
+
+/* Absolute example elements */
+
+.absolute__parent {
+    background-color: orange;
+    position: relative;
+    width: 500px;
+    height: 200px;
+    
+}
+
+.absolute__child {
+    background-color: green;
+    position: absolute;
+    width: 250px;
+    height: 100px;
+    top: 100px;
+    left: 250px;
+}
+
+/* Fixed example elements */
+
+.fixed__example {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 200px;
+    height: 50px;
+    background-color: lightgreen;
+}
+
+/* sticky example elements */
+
+.sticky {
+    margin-bottom: 30px;
+}
+
+.sticky__example p {
+    background-color: orange;
+    overflow: scroll;
+    display: block;
+    height: 300px;
+}
+
+.sticky__example {
+    background-color: orange;
+    text-align: center;
+}
+
+.stuck {
+    position: sticky;
+    top: 0px;
+    background-color: green;
+}

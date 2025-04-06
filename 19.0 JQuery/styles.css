@@ -1,0 +1,15 @@
+
+.big-title{
+    font-size : 10rem;
+    font-style: italic;
+    color : 'red'
+}
+
+.button-color {
+    font-size : 2rem;
+    color : 'blue'
+}
+
+.container {
+    display : flex
+}

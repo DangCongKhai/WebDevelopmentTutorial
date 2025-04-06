@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    
+    <title>Frontend Mentor | Social proof section</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      *{
+        margin: 0;
+        padding:0
+      }
+      body{
+        background-image: url("images/bg-pattern-top-desktop.svg");
+        font-family: "Spartan",serif;
+        font-size: 15px;
+      }
+      h1,p,h3{
+        color:hsl(300, 43%, 22%)
+      }
+      
+      .container{
+
+        padding:100px;
+      }
+      .top{
+        display: flex;
+        justify-content: space-between;
+      }
+      .big-heading{
+        margin-left:125px;
+      }
+      .big-heading>h1{
+        font-size: 3rem;
+      }
+      .big-heading>p{
+        margin-top:20px;
+        font-size:17px;
+      }
+      .top > .ratings{
+        width:50%
+      }
+      /*Style for the rating boxes*/
+      .customer-rating{
+        background-color: hsl(300, 24%, 96%);
+        height:50px;
+        width:65%;
+        display: flex;
+        justify-content:center;
+        align-items: center;;
+        /* border:solid; */
+        border-radius:2%;
+        gap:30px;
+      }
+      .ratings>*{
+        margin-top: 25px;;
+      }
+      .rating-2>.customer-rating{
+        margin-left:50px
+      }
+      .rating-3>.customer-rating{
+        margin-left: 100px;
+      }
+      .bottom{
+        display:flex;
+        margin-top:40px;
+        padding: 50px;
+        gap:28px;
+        padding-left:125px;
+      }
+
+      /* each box element*/
+      .bottom>*{
+        border:solid ;
+        width:300px;
+        padding: 40px 30px;
+        background-color: hsl(300, 43%, 22%);
+      }
+      .image-name{
+        display: flex;
+        gap:20px;
+      }
+      .image{
+        width: 40px; /* Adjust the width and height as needed */
+        height: 40px;
+        border-radius: 50%; /* Make it a circle by setting border-radius to 50% */
+        overflow: hidden; /* Hide the parts of the image outside the circle */
+        margin-bottom:20px;
+      }
+      .image>img{
+        width:100%;
+        height: auto;
+        display: inline-block
+      }
+      .bottom p{
+        color:white
+      }
+      .name>p{
+        font-weight: bold;
+      }
+      .name span.buyer{
+        font-weight: 100;
+        color:hsl(333, 80%, 67%)
+      }
+      @media (max-width: 394px) {
+  .container {
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  * {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: center; /* Center-align elements in the container */
+  }
+
+  .big-heading {
+    margin-left: 0; /* Remove left margin */
+    text-align: center; /* Center-align text */
+  }
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <div class="big-heading">
+          <h1 class="title">10,000+ of our<br> users love our<br> products.</h1>
+          <p>
+          We only provide great products combined with excellent<br> customer service.
+          See what our satisfied customers are<br>saying about our services.</p>
+        </div>
+        <div class="ratings">
+          <div class="rating-1">
+            <div class="customer-rating">
+              <div class="rating-image">
+                <img src="./images/icon-star.svg">
+                <img src="./images/icon-star.svg">
+                <img src="./images/icon-star.svg">
+                <img src="./images/icon-star.svg">
+                <img src="./images/icon-star.svg">
+              </div>
+              <div class="rating-1-text">
+                <h3>Rated 5 Stars in Reviews</h3>
+              </div>
+            </div>
+          </div>
+          <div class="rating-2">
+            <div class="customer-rating">
+              <div class="rating-image">
+                <img src="./images/icon-star.svg">
+                <img src="./images/icon-star.svg">
+                <img src="./images/icon-star.svg">
+                <img src="./images/icon-star.svg">
+                <img src="./images/icon-star.svg">
+              </div>
+              <div class="rating-2-text">
+                <h3>Rated 5 Stars in Report Guru</h3>
+              </div>
+            </div>
+          </div>
+          <div class="rating-3">
+            <div class="customer-rating">
+              <div class="rating-image">
+                <img src="./images/icon-star.svg">
+                <img src="./images/icon-star.svg">
+                <img src="./images/icon-star.svg">
+                <img src="./images/icon-star.svg">
+                <img src="./images/icon-star.svg">
+              </div>
+              <div class="rating-3-text">
+                <h3>Rated 5 Stars in BestTech</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          
+
+      <div class="bottom">
+        <div class="review-1">
+          <div class="image-name">
+            <div class="image">
+              <img src="./images/image-colton.jpg">
+            </div>
+            <div class="name">
+              <p>Colton Smith <br/><span class="buyer">Verified Buyer</span></p>
+            </div>
+          </div>
+          <p class="proof">
+            "We needed the same printed design as the one we had ordered a week prior.
+          Not only did they find the original order, but we also received it in time.
+          Excellent!"
+          </p>
+        </div>
+        <div class="review-2">
+          <div class="image-name">
+            <div class="image"> <img src="./images/image-irene.jpg"></div>
+            <div class="name">
+              <p>Irene Roberts  <br/><span class="buyer">Verified Buyer</span></p>
+            </div>
+          </div>
+          <p class="proof">
+            "Customer service is always excellent and very quick turn around. Completely
+            delighted with the simplicity of the purchase and the speed of delivery."
+          </p>
+        </div>
+        <div class="review-3">
+          <div class="image-name">
+            <div class="image"> <img src="./images/image-anne.jpg"></div>
+            <div class="name">
+              <p>Anne Wallace<br/><span class="buyer">Verified Buyer</span></p>
+            </div>
+          </div>
+          <p class="proof">
+            "Put an order with this company and can only praise them for the very high
+            standard. Will definitely use them again and recommend them to everyone!"
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
